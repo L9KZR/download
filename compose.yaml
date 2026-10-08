@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATA_DIR: /var/data
+    ports:
+      - "10000:10000"
+    init: true
+    volumes:
+      - bot-data:/var/data
+volumes:
+  bot-data:

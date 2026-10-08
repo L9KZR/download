@@ -1,0 +1,24 @@
+# Free Web Service; local permissions and download links are ephemeral.
+services:
+  - type: web
+    name: social-downloader-bot
+    runtime: docker
+    plan: free
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: DATA_DIR
+        value: /tmp/social-bot-data
+      - key: LINK_TTL_SECONDS
+        value: "3600"
+      - key: VIDEO_HEIGHT
+        value: "1080"
+      - key: DOWNLOAD_TIMEOUT
+        value: "0"
+      - key: JOB_DISK_LIMIT_MB
+        value: "0"

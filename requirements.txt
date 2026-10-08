@@ -1,0 +1,5 @@
+python-telegram-bot[socks]>=22.5,<23
+tornado>=6.4,<7
+yt-dlp[default]
+gallery-dl
+python-dotenv>=1,<2

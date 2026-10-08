@@ -1,0 +1,2 @@
+37 local tests passed. HTTP tests exercise actual local Tornado responses, byte ranges, HEAD, expiry, revocation, restart persistence, traversal and unknown-token rejection. Boundary tests check 49 MB direct, 49 MB+1 linked, 300 MB linked and >300 MB rejected using sparse files and mocked Telegram. Access, concurrent launch and subprocess tests included.
+Not tested: real platform downloads, live Telegram delivery, Docker build or Render deployment.
